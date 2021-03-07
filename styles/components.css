@@ -747,13 +747,13 @@ details>summary::-webkit-details-marker {
 }
 
 .detail-vypujcky-container {
-  display: none;
+  display: block;
+  overflow: hidden;
+  transition: height 0.5s ease-out;
+  height: 0;
   
 }
-.detail-vypujcky-container.detail-vypujcky-container-checked {
-  display: block;
-  transform:scaleY(0);
-}
+
 
 .vypujcka-container-icon-mobile,
 .vypujcka-container-icon-mobile-prehled {

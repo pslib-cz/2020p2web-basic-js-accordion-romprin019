@@ -225,20 +225,23 @@
             </div>
         </footer>
     </div>
+    
+    
     <script>
-        let scriptik = document.getElementsByClassName("vypujcka-item")
-        for(i = 0; i < scriptik.length; i++){
-            let inputs = scriptik[i].getElementsByTagName("input")
-            let el = scriptik[i].getElementsByClassName("detail-vypujcky-container")
-            inputs[0].onclick = (a) => {
-                if(inputs[0].checked){
-                    el[0].style.display = "block";
+        var scriptik = document.getElementsByClassName("vypujcka-item");
+        var blocks = document.getElementsByClassName("detail-vypujcky-container");
+        for(let i = 0; i < scriptik.length; i++){
+            let inputs = scriptik[i].querySelector("input");
+            inputs.onclick = () => {
+                if(inputs.checked){;
+                    blocks[i].style.height = blocks[i].scrollHeight + "px";
                 } else{
-                    el[0].style.display = "none";
+                    blocks[i].style.height = "0px";
                 }
             }
         }
     </script>
+
     
 </body>
 
