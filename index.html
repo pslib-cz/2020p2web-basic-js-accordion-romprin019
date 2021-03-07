@@ -225,6 +225,23 @@
             </div>
         </footer>
     </div>
+    
+        
+    <script>
+        let scriptik = document.getElementsByClassName("vypujcka-item")
+        for(i = 0; i < scriptik.length; i++){
+            let inputs = scriptik[i].getElementsByTagName("input")
+            let el = scriptik[i].getElementsByClassName("detail-vypujcky-container")
+            inputs[0].onclick = (a) => {
+                if(inputs[0].checked){
+                    el[0].style.display = "block";
+                } else{
+                    el[0].style.display = "none";
+                }
+            }
+        }
+    </script>
+    
 </body>
 
 </html>
